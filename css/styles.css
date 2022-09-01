@@ -10,6 +10,7 @@
     --header-logo-color: #000;
     --portfolio-border-color: #eeeeee;
     --header-border-color: #ececec;
+    --icon-color: #aeb1b8;
 }
 
 body {
@@ -76,16 +77,38 @@ ul {
             display: flex;
             list-style: none;
             letter-spacing: 0.02em;}
+
+        .contact-container {
+            margin-left: auto;}
     
         .contact-link {
             color: var(--text-color);
-            display: inline-block;
+            display: block;
             text-decoration: none;
             font-size: 14px;
             font-weight: 500;
             line-height: 1.14;
             padding-top: 32px;
             padding-bottom: 32px;}
+
+                        .contact-list {
+                            list-style: none;
+                            display: flex;}
+            
+                        .contact-link {
+                            display: flex;
+                            flex-direction: row-reverse;
+                            align-items: center;
+                            gap: 10px;
+                            text-decoration: none;
+                            fill: var(--icon-color);
+                        }
+            
+                        .contact-link:hover,
+                        .contact-link:focus {
+                            color: var(--accent-color);
+                            fill: var(--accent-color);
+                        }
     
         .navigation-list .navigation-link {
             color: var(--title-color);
@@ -114,6 +137,7 @@ ul {
                         }
 
         .list {
+            list-style: none;
             display: flex;
             margin-top: 50px;
                 }
@@ -150,10 +174,23 @@ ul {
             list-style: none;
             margin-right: 8px;
         }
+
+                .portfolio-link .text {
+                    font-size: 16px;
+                    line-height: 1.88;
+                    letter-spacing: 0.03em;
+                }
+        
+                .portfolio-link .title {
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 2;
+                    letter-spacing: 0.06em;
+                }
                                     
         .list-item {
             margin-right: 30px;
-            margin-bottom: 30px;
+            margin-bottom: 0px;
         }
                                     
         .contact-list-item:last-child,
@@ -233,11 +270,22 @@ ul {
         .accent {
             color: var(--accent-color);}
 
-        .hiro-section {
-            background-color: var(--footer-bgc-color);
-            text-align: center;
-            padding-top: 200px;
-            padding-bottom: 200px;}
+        
+            .hiro-section {
+                    background-image: linear-gradient(180deg,
+                            rgba(47, 48, 58, 0.4) 0%,
+                            rgba(47, 48, 58, 0) 100%),
+                        url("../images/background-image.jpg");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    max-width: 1600px;
+                    max-height: 600px;
+                    background-color: var(--footer-bgc-color);
+                    text-align: center;
+                    padding-top: 200px;
+                    padding-bottom: 200px;
+                    margin: 0 auto;
+                }
 
         .hiro-section .container {
             width: 696px;}
@@ -277,12 +325,48 @@ ul {
         .hiro-button:focus {
             background-color: var(--hiro-button-hover);}
 
+                        .advantage-container-icon {
+                            background-color: var(--light-grey-color);
+                            width: 270px;
+                            height: 120px;
+                            display: flex;
+                            margin-bottom: 30px;
+                            fill: currentColor;
+                            align-items: center;
+                            justify-content: center;
+                        }
+
         .advantage .list-item {
             width: 25%;}
         
         .working .list {
             display: flex;
             align-items: flex-end;}
+
+                        .team-list-icon {
+                            list-style: none;
+                            display: flex;
+                            gap: 10px;
+                            margin-top: 16px;
+                        }
+            
+                        .team-icon-link {
+                            display: inline-block;
+                            text-decoration: none;
+                            width: 44px;
+                            height: 44px;
+                            border-radius: 50%;
+                            fill: var(--icon-color);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+            
+                        .team-icon-link:hover,
+                        .team-icon-link:focus {
+                            background-color: var(--accent-color);
+                            fill: var(--white-color);
+                        }
 
         .working {
             padding-top: 94px;
@@ -354,12 +438,86 @@ ul {
             padding-top: 94px;
             padding-bottom: 94px;
         }
+
+                .clients {
+                    padding-top: 94px;
+                    padding-bottom: 94px;
+                }
+        
+                .clients-list {
+                    display: flex;
+                    gap: 30px;
+                }
+        
+                .clients-icon-link {
+                    border: 1px solid #afb1b8;
+                    border-radius: 4px;
+                    display: inline-block;
+                    fill: var(--icon-color);
+                    width: 170px;
+                    height: 92px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+        
+                .clients-icon-link:hover,
+                .clients-icon-link:focus {
+                    border: 1px solid var(--accent-color);
+                    fill: var(--accent-color);
+                }
         
         .footer {
             background-color: var(--footer-bgc-color);
             padding-top: 60px;
             padding-bottom: 60px;
         }
+
+                .footer-flexbox {
+                    display: flex;
+                    gap: 70px;
+                }
+        
+                .footer-list-icon {
+                    list-style: none;
+                    display: flex;
+                    gap: 10px;
+                    margin-top: 20px;
+                }
+        
+                .footer-flex-icon {
+                    display: flex;
+                    justify-content: center;
+                    align-items: baseline;
+                    flex-direction: column;
+                }
+        
+                .footer-icon-link {
+                    display: inline-block;
+                    text-decoration: none;
+                    width: 44px;
+                    height: 44px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    fill: var(--white-color);
+                    background-color: rgba(255, 255, 255, 0.1);
+                }
+        
+                .footer-icon-link:hover,
+                .footer-icon-link:focus {
+                    background-color: var(--accent-color);
+                }
+        
+                .footer-caption {
+                    color: var(--white-color);
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 1.14;
+                    letter-spacing: 0.03em;
+                    text-transform: uppercase;
+                }
 
         .footer-adress {
             font-style: normal;
