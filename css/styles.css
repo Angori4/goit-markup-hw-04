@@ -369,12 +369,14 @@ ul {
                         }
 
         .working {
-            padding-top: 94px;
             padding-bottom: 94px;
         }
         
         .team {
-            background-color: var(--light-grey-color);}
+            background-color: var(--light-grey-color);
+            padding-top: 94px;
+            padding-bottom: 94px;
+        }
 
         .team-content {
             background-color: var(--white-color);
@@ -431,7 +433,8 @@ ul {
             margin-top: 10px;}
 
         .section:nth-child(even) {
-            padding-top: 94px;}
+            padding-top: 94px;
+            padding-bottom: 94px}
 
         .section:nth-child(odd),
         .section:last-child {
